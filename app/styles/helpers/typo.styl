@@ -1,0 +1,58 @@
+rem(font-px, font-size = font-size--base)
+    return ( ( (font-px) * 100 / (font-size) ) / 100 ) rem
+
+font-size--base = 10px
+font-size = rem(15px)
+
+font-family = 'PT Sans', -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
+font-family--serif = 'Georgia', 'Times New Roman', 'Times', serif
+font-family--monospace = 'Courier New', SFMono-Regular, 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace
+font-family--headings = font-family
+
+line-height = 1.5
+text-color = #3d3d3d
+
+font-size--h1 = rem(32px)
+font-size--h2 = rem(24px)
+font-size--h3 = rem(18px)
+font-size--h4 = rem(16px)
+font-size--h5 = rem(16px)
+font-size--h6 = rem(16px)
+
+html
+    font-size font-size--base
+
+body
+    // ТОЛЬКО типографика!
+    font-family font-family
+    font-size font-size
+    line-height line-height
+    color text-color
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+    font-family $font-family--headings
+    font-weight 700
+    line-height 1.2
+
+h1
+    font-size $font-size--h1
+
+h2
+    font-size $font-size--h2
+
+h3
+    font-size $font-size--h3
+
+h4
+    font-size $font-size--h4
+
+h5
+    font-size $font-size--h5
+
+h6
+    font-size $font-size--h6

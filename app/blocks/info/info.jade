@@ -1,0 +1,20 @@
+include /blocks/field-text/field-text
+
+mixin info()
+    .info
+        +field-text({title: 'Полное ФИО',
+                     classes: 'field-text--info',
+                     val: 'Иванов Иван Иванович'})
+        +field-text({title: 'Год рождения',
+                     classes: 'field-text--info',
+                     val: '1990'})
+        +field-text({title: 'Место жительства',
+                     classes: 'field-text--info',
+                     val: 'г.Иваново, Россия'})
+        +field-text({title: 'Скайп',
+                     classes: 'field-text--info',
+                     val: 'ivanov'})
+        +field-text({title: 'Почта',
+                     classes: 'field-text--info',
+                     val: 'ivanov@gmail.com'})
+        block

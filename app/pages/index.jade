@@ -1,0 +1,12 @@
+include /blocks/logo/logo
+include /blocks/page-header/page-header
+include /blocks/info/info
+extends /blocks/layout-default/layout-default
+
+block head
+    - var pageTitle = 'CSSSR Project Template';
+
+block header
+    +page-header
+block content
+    +info

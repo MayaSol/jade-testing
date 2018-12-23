@@ -1,0 +1,31 @@
+mixin field-text(props)
+
+  //- Вызов:
+    +field-text({
+      title: 'Название',
+      classes: '',
+      val: '',
+      attrs: {
+        name: 'comment',
+      }
+    })
+
+  -
+    if(props == null) {
+      var props = {};
+    }
+    if(props.attrs == null) {
+      props.attrs = {};
+    }
+    if (props.classes == null) {
+        props.classes = '';
+    }
+
+  label.field-text(class=props.classes)&attributes(attributes)
+    if !(props.title == null)
+      span.field-text__name!= props.title
+    span.field-text__input-wrap
+      input.field-text__input( type='text', value=(props.val !== null) ? props.val : '')&attributes(props.attrs)
+    block
+
+
