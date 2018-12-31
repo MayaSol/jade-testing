@@ -1,0 +1,37 @@
+include /blocks/field-radio/field-radio
+
+mixin plans()
+	section.plans
+		h2.plans__title Какие у вас планы на будущее?
+		p.plans__text Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.
+			+field-radio([
+				{
+					title: 'Верстать',
+					attrs: {
+						name: 'plans',
+						value: 'html'
+					}
+				},
+				{
+					title: 'Прокачиваться в JS',
+					attrs: {
+						name: 'plans',
+						value: 'js'
+					}
+				},
+				{
+					title: 'Менеджерство',
+					attrs: {
+						name: 'plans',
+						value: 'manage'
+					}
+				},
+				{
+					title: 'Другое',
+					attrs: {
+						name: 'plans',
+						value: 'other'
+					}
+				}
+			])(class='field-radio--plans')
+

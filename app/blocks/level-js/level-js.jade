@@ -1,0 +1,16 @@
+include /blocks/range/range
+
+mixin level-js()
+	section.level-js
+		h2.level-js__title Уровень владения JavaScript
+		+range({titleStart: 'Не владею',
+				titleEnd: 'Пишу сложный JS с нуля',
+				dots:[{
+					   title:'Использую готовые решения',
+					   value:'148px'
+					   },
+					  {
+					   title:'Использую готовые решения и умею их переделывать',
+					   value:'373px'
+					  }]
+				})(id='#range-level-js')

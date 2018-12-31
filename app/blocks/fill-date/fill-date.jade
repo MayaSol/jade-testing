@@ -1,0 +1,9 @@
+include /blocks/field-text/field-text
+
+mixin fill-date()
+	section.fill-date
+		+field-text({
+						title: 'Дата заполнения',
+						classes: 'field-text--filldate',
+						val: '30.12.2018'
+					})

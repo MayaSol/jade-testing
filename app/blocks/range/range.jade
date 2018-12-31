@@ -1,0 +1,29 @@
+mixin range(props)
+
+	//- Вызов:
+		+range({
+		  titleStart: '0',
+		  titleEnd: '100%'
+		  dots: [{
+			title: '20%',
+			value: '100px'
+		  }]
+		})
+	-
+		if (props.titleStart == null)
+			props.titleStart = ''
+		if (props.titleEnd == null)
+			props.titleEnd = ''
+
+	.range#range-level-js
+		input.range__button(type='image' src='assets/images/icon-range-btn.png')
+		ul.range__dots.dots-range
+			li.dots-range__item.dots-range__item--start
+				span.dots-range__title #{props.titleStart}
+
+			each dot in props.dots
+				li.dots-range__item.dots-range__item--middle(style={left: dot.value})
+					span.dots-range__title #{dot.title}
+
+			li.dots-range__item.dots-range__item--end
+				span.dots-range__title #{props.titleEnd}

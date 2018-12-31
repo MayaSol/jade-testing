@@ -1,0 +1,46 @@
+.about
+	display block
+	margin-bottom 15px
+	&__title
+		color #2f1b15
+		margin-bottom 0
+
+.field-checkbox--about
+	margin-top 20px
+	display flex
+	flex-direction column
+	flex-wrap wrap
+	height 275px
+	.field-checkbox
+		&__input-wrap
+			width 33%
+			margin-bottom 3px
+			flex-shrink 0
+		&__input
+			display none
+			position relative
+		&__input:checked ~ .field-checkbox__name-text::before
+			background-image url('/assets/images/icon-checkbox--checked.png')
+		&__name-text
+			position relative
+			display flex
+			align-items flex-start
+			color #000000
+			font-family "PT Sans"
+			font-size rem(21px)
+			font-weight 700
+			line-height rem(25px)
+			span
+				display inline-block
+				margin-top 7px
+			&::before
+				content ''
+				display inline-block
+				width 24px
+				height 28px
+				margin-right 3px
+				background-image url('/assets/images/icon-checkbox.png')
+				background-repeat no-repeat
+				background-position left bottom
+			&::selection
+				background-color transparent

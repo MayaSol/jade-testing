@@ -1,0 +1,20 @@
+mixin field-checkbox(checkboxes, title)
+	.field-checkbox&attributes(attributes)
+		if!(title == null)
+			.field-checkbox__title!= title
+		each checkbox in checkboxes
+			-
+				if(checkbox.classes == null)
+					checkbox.classes = ''
+			-
+				if(checkbox.attrs == null)
+					checkbox.attrs = {}
+			-
+				if(checkbox.title == null)
+					checkbox.title = ''
+
+			.field-checkbox__input-wrap(class=checkbox.classes)
+				label.field-checkbox__name
+					input.field-checkbox__input(type='checkbox')&attributes(checkbox.attrs)
+					span.field-checkbox__name-text
+						span!= checkbox.title

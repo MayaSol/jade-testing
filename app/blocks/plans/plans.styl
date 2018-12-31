@@ -1,0 +1,39 @@
+.plans
+	display block
+	margin-top 45px
+
+.field-radio--plans
+	display flex
+	margin-top 10px
+	.field-radio
+		&__input-wrap
+			flex-shrink 0
+			margin-right 5px
+		&__input
+			display none
+			position relative
+		&__input:checked ~ .field-radio__name-text::before
+			background-image url('/assets/images/icon-radio--checked.png')
+		&__name-text
+			position relative
+			display flex
+			align-items center
+			margin-right 20px
+			color #000000
+			font-family "PT Sans"
+			font-size rem(19px)
+			font-weight 700
+			line-height rem(25px)
+			span
+				display inline-block
+			&::before
+				content ''
+				display inline-block
+				width 28px
+				height 28px
+				margin-right 3px
+				background-image url('/assets/images/icon-radio.png')
+				background-repeat no-repeat
+				background-position left bottom
+			&::selection
+				background-color transparent

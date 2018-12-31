@@ -1,0 +1,45 @@
+mixin field-radio(radiobuttons, title)
+
+	//- Принимает:
+	//-   radiobuttons {array}
+	//-     {object}
+	//-       title: ''         {string} - текст рядом с радиокнопкой
+	//-       classes: ''          {string} - модификаторы обертки радиокнопки
+	//-       attrs:            {object} - любые атрибуты для input
+	//-         name:           {string}
+	//-         ...
+	//- Вызов:
+				+field-radio([
+					{
+						title: 'Радиокнопка1',
+						classes: '',
+						attrs: {
+							name: 'radio',
+							checked: true,
+						}
+					},
+					{
+						title: 'Радиокнопка2',
+						classes: '',
+						attrs: {
+							name: 'radio',
+						}
+					},
+				], 'ОбщееНазваниеБлока')
+
+	.field-radio&attributes(attributes)
+		if!(title == null)
+			.field-radio__title!= title
+		each checkbox in radiobuttons
+			-
+				if(checkbox == null)
+					checkbox = {}
+			-
+				if(checkbox.attrs == null)
+					checkbox.attrs = {}
+
+			.field-radio__input-wrap(class=checkbox.classes)
+				label.field-radio__name
+					input.field-radio__input(type='radio')&attributes(checkbox.attrs)
+					span.field-radio__name-text
+						span!= checkbox.title

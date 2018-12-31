@@ -1,0 +1,26 @@
+include /blocks/field-checkbox/field-checkbox
+
+mixin about()
+	section.about
+		h2.about__title Расскажите о себе чекбоксами
+		p.about__text Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
+		+field-checkbox([{title: 'БЭМ/OOCSS', attrs: {name: 'bem', checked: 'checked'}},
+				{title: 'Pug (Jade)', attrs: {name: 'bem', checked: 'checked'}},
+				{title: 'Stylus/LESS/SASS', attrs: {name: 'bem', checked: 'checked'}},
+				{title: 'Работаю с SVG', attrs: {name: 'bem', checked: 'checked'}},
+				{title: 'Верстаю семантично', attrs: {name: 'bem', checked: 'checked'}},
+				{title: 'Accessibility (A11Y)',attrs: {name: 'bem'}},
+				{title: 'ES2015/ES2016', attrs: {name: 'bem', checked: 'checked'}},
+				{title: 'Gulp/GRUNT',attrs: {name: 'bem', checked: 'checked'}},
+				{title: 'Webpack',attrs: {name: 'bem'}},
+				{title: 'Дружу с WebGL',attrs: {name: 'bem'}},
+				{title: 'jQuery',attrs: {name: 'bem'}},
+				{title: 'Знаю/изучаю Angular',attrs: {name: 'bem'}},
+				{title: 'Знаю/изучаю React',attrs: {name: 'bem', checked: 'checked'}},
+				{title: 'Знаю/изучаю Node.js',attrs: {name: 'bem'}},
+				{title: 'Использую Git',attrs: {name: 'bem', checked: 'checked'}},
+				{title: 'С глазомером всё ок',attrs: {name: 'bem', checked: 'checked'}},
+				{title: 'Читаю blog.csssr.ru',attrs: {name: 'bem', checked: 'checked'}},
+				{title: 'Я ленивый(-ая)',attrs: {name: 'bem', checked: 'checked'}},
+				{title: 'У меня хороший<br>английский',attrs: {name: 'bem', checked: 'checked'}}
+				])(class="field-checkbox--about")
