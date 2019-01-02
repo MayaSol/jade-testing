@@ -1,15 +1,17 @@
 .about
+	container()
 	display block
 	margin-bottom 15px
 	&__title
 		color #2f1b15
 		margin-bottom 0
 
-.field-checkbox--about
+.about__field
 	margin-top 20px
 	display flex
 	flex-direction column
 	flex-wrap wrap
+	align-content space-between
 	height 275px
 	.field-checkbox
 		&__input-wrap
@@ -20,7 +22,7 @@
 			display none
 			position relative
 		&__input:checked ~ .field-checkbox__name-text::before
-			background-image url('/assets/images/icon-checkbox--checked.png')
+			sprite($icon_checkbox_checked);
 		&__name-text
 			position relative
 			display flex
@@ -39,8 +41,6 @@
 				width 24px
 				height 28px
 				margin-right 3px
-				background-image url('/assets/images/icon-checkbox.png')
-				background-repeat no-repeat
-				background-position left bottom
+				sprite($icon_checkbox);
 			&::selection
 				background-color transparent

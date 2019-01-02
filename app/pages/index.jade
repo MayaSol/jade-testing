@@ -9,14 +9,16 @@ include /blocks/fill-date/fill-date
 extends /blocks/layout-default/layout-default
 
 block head
-    - var pageTitle = 'CSSSR Project Template';
+	- var pageTitle = 'CSSSR Project Template';
 
+block page
+	- var pageClass = 'page--jobform';
 block header
-    +page-header
+	+page-header
 block content
-    +info
-    +about
-    +level-js
-    +about-text
-    +plans
-    +fill-date
+	+info
+	+about
+	+level-js
+	+about-text
+	+plans
+	+fill-date

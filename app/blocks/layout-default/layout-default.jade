@@ -5,8 +5,9 @@ include ../scripts/scripts
 
 doctype html
 html(lang='ru')
-    include ../head/head
-    +page
-        block header
-        block content
-        +scripts(['app.min.js','range.min.js'])
+	include ../head/head
+	block page
+	+page(class= pageClass)
+		block header
+		block content
+		+scripts(['app.min.js','range.min.js'])

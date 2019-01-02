@@ -15,8 +15,8 @@ mixin range(props)
 		if (props.titleEnd == null)
 			props.titleEnd = ''
 
-	.range#range-level-js
-		input.range__button(type='image' src='assets/images/icon-range-btn.png')
+	.range&attributes(attributes)
+		input.range__button(type='image' src='assets/images/icon-range-btn.png' alt="Бегунок")
 		ul.range__dots.dots-range
 			li.dots-range__item.dots-range__item--start
 				span.dots-range__title #{props.titleStart}

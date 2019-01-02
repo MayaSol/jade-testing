@@ -5,6 +5,8 @@ function makeRange(rangeId) {
 	const button = document.querySelector(rangeId + ' .range__button');
 	console.log('rangeId: ' + rangeId);
 	console.log('button: ' + rangeId + ' .range__button');
+	console.log(slider);
+	console.log(button);
 
 	button.onmousedown = function (evt) {
 
