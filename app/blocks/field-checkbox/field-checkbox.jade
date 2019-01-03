@@ -1,16 +1,16 @@
 mixin field-checkbox(checkboxes, title)
 	.field-checkbox&attributes(attributes)
-		if!(title == null)
+		if!(typeof title === 'undefined')
 			.field-checkbox__title!= title
 		each checkbox in checkboxes
 			-
-				if(checkbox.classes == null)
+				if(typeof checkbox.classes === 'undefined')
 					checkbox.classes = ''
 			-
-				if(checkbox.attrs == null)
+				if(typeof checkbox.attrs === 'undefined')
 					checkbox.attrs = {}
 			-
-				if(checkbox.title == null)
+				if(typeof checkbox.title === 'undefined')
 					checkbox.title = ''
 
 			.field-checkbox__input-wrap(class=checkbox.classes)

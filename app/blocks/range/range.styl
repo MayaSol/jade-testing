@@ -1,26 +1,25 @@
 .range
-	display block
 	position relative
-	height 3px
 	margin-top 30px
+	display block
+	height 3px
 	outline 1px solid red
 	&::after
-		content ''
 		position absolute
 		right 0
 		left 0
-		height 3px
-		//outline 1px solid orange
-		background-image url('/assets/images/input-bottom-bg.png')
-		background-repeat repeat
 		margin-right 8px
 		margin-left 8px
+		height 3px
+		content ''
+		background-image url('/assets/images/input-bottom-bg.png')
+		background-repeat repeat
 	&__button
-		font-size 0
 		position absolute
+		left 0
 		bottom 100%
 		margin-bottom 5px
-		left 0
+		font-size 0
 		outline 1px solid green
 .range__dots
 	position absolute
@@ -31,8 +30,8 @@
 .dots-range__item--end
 	position absolute
 	top 1px
-	height 25px
 	width 3px
+	height 25px
 	background-image url('/assets/images/dot-edge.png')
 	background-repeat no-repeat
 .dots-range__item--start
@@ -52,15 +51,15 @@
 	background-image url('/assets/images/dot-middle.png')
 	background-repeat no-repeat
 	.dot-range__title
-		display inline-block
 		left 0
+		display inline-block
 .dots-range__title
 	position absolute
 	top 25px
-	color: #2f1b15;
-	font-family: 'PT Sans';
-	font-size: rem(13px);
-	font-weight: 700;
-	line-height: rem(19px);
 	width 196px
+	font-family 'PT Sans'
+	font-size rem(13px)
+	font-weight 700
+	line-height rem(19px)
+	color #2f1b15
 

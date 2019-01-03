@@ -1,39 +1,39 @@
 .plans
 	container()
-	display block
 	margin-top 45px
+	display block
 
 .plans__field
-	display flex
 	margin-top 10px
+	display flex
 	.field-radio
 		&__input-wrap
-			flex-shrink 0
 			margin-right 5px
+			flex-shrink 0
 		&__input
-			display none
 			position relative
+			display none
 		&__input:checked ~ .field-radio__name-text::before
-			sprite($icon_radio_checked);
+			sprite($icon_radio_checked)
 		&__name-text
 			position relative
+			margin-right 20px
 			display flex
 			align-items center
-			margin-right 20px
-			color #000000
 			font-family 'PT Sans'
 			font-size rem(19px)
 			font-weight 700
 			line-height rem(25px)
+			color #000000
 			span
 				display inline-block
 			&::before
-				content ''
+				margin-right 3px
 				display inline-block
 				width 28px
 				height 28px
-				margin-right 3px
-				sprite($icon_radio);
+				content ''
+				sprite($icon_radio)
 				cursor pointer
 			&::selection
 				background-color transparent

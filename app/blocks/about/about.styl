@@ -1,10 +1,10 @@
 .about
 	container()
-	display block
 	margin-bottom 15px
+	display block
 	&__title
-		color #2f1b15
 		margin-bottom 0
+		color #2f1b15
 
 .about__field
 	margin-top 20px
@@ -15,32 +15,32 @@
 	height 275px
 	.field-checkbox
 		&__input-wrap
-			width 33%
 			margin-bottom 3px
+			width 33%
 			flex-shrink 0
 		&__input
-			display none
 			position relative
+			display none
 		&__input:checked ~ .field-checkbox__name-text::before
-			sprite($icon_checkbox_checked);
+			sprite($icon_checkbox_checked)
 		&__name-text
 			position relative
 			display flex
 			align-items flex-start
-			color #000000
-			font-family "PT Sans"
+			font-family 'PT Sans'
 			font-size rem(21px)
 			font-weight 700
 			line-height rem(25px)
+			color #000000
 			span
-				display inline-block
 				margin-top 7px
+				display inline-block
 			&::before
-				content ''
+				margin-right 3px
 				display inline-block
 				width 24px
 				height 28px
-				margin-right 3px
-				sprite($icon_checkbox);
+				content ''
+				sprite($icon_checkbox)
 			&::selection
 				background-color transparent

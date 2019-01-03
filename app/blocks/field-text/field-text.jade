@@ -11,18 +11,18 @@ mixin field-text(props)
 		})
 
 	-
-		if(props == null) {
+		if(typeof props === 'undefined') {
 			var props = {};
 		}
-		if(props.attrs == null) {
+		if(typeof props.attrs === 'undefined') {
 			props.attrs = {};
 		}
-		if(props.classes == null) {
+		if(typeof props.classes === 'undefined') {
 			props.classes = '';
 		}
 
 	label.field-text(class=props.classes)&attributes(attributes)
-		if !(props.title == null)
+		if !(typeof props.title === 'undefined')
 			span.field-text__name!= props.title
 		span.field-text__input-wrap
 			input.field-text__input( type='text', value=(props.val !== null) ? props.val : '')&attributes(props.attrs)

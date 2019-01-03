@@ -28,14 +28,14 @@ mixin field-radio(radiobuttons, title)
 				], 'ОбщееНазваниеБлока')
 
 	.field-radio&attributes(attributes)
-		if!(title == null)
+		if!(typeof title === 'undefined')
 			.field-radio__title!= title
 		each checkbox in radiobuttons
 			-
-				if(checkbox == null)
+				if(typeof checkbox === 'undefined')
 					checkbox = {}
 			-
-				if(checkbox.attrs == null)
+				if(typeof checkbox.attrs === 'undefined')
 					checkbox.attrs = {}
 
 			.field-radio__input-wrap(class=checkbox.classes)
