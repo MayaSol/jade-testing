@@ -1,9 +1,44 @@
 include /blocks/field-text/field-text
 
-mixin about-text()
-	section.about-text
+mixin about-text(aboutText)
+
+	-
+		function chunk(str,n) {
+			str = str || '';
+			var arr = str.split(' ');
+			var strings = [];
+			var j = 0;
+			for (i=0; i < arr.length;) {
+				if (!strings[j]) {
+					strings[j] = arr[i];
+					i++;
+				}
+				else if ( (strings[j].length + arr[i].length) <= (n-1) ) {
+					strings[j] = strings[j] + ' ' + arr[i];
+					i++;
+				}
+				else {
+					j++;
+				}
+			}
+			return strings;
+		};
+		var arrStr = chunk(aboutText, 40);
+		arrStr = (arrStr.length < 3) ? arrStr.concat(Array(3-arrStr.length)) : arrStr;
+
+	section.about-text&attributes(attributes)
 		h2.about-text__title Расскажите о себе словами
 		.about-text__text
 			p Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.
-		each i in Array(3)
-			+field-text({classes: 'about-text__field'})
+		.about-text__fields
+			each val, index in arrStr
+				+field-text({
+								classes: 'about-text__field',
+								attrs: { maxlength: 40, tabIndex: index },
+								val: val
+							})
+		template(id = 'about-text-field-template' style='display:none')
+			+field-text({
+							classes: 'about-text__field',
+							attrs: {maxlength: 40}
+						})

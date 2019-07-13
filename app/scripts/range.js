@@ -1,12 +1,6 @@
-console.log('range.js');
-
 function makeRange(rangeId) {
 	const slider = document.querySelector(rangeId);
-	const button = document.querySelector(rangeId + ' .range__button');
-	console.log('rangeId: ' + rangeId);
-	console.log('button: ' + rangeId + ' .range__button');
-	console.log(slider);
-	console.log(button);
+	const button = slider.querySelector(rangeId + ' .range__button');
 
 	button.onmousedown = function (evt) {
 
@@ -22,7 +16,6 @@ function makeRange(rangeId) {
 		const buttonCoords = getCoords(button);
 		const shiftX = evt.pageX - buttonCoords.left;
 		const sliderCoords = getCoords(slider);
-		console.log('Drag started');
 
 
 		document.onmousemove = function (event) {
@@ -42,7 +35,6 @@ function makeRange(rangeId) {
 
 		document.onmouseup = function () {
 			document.onmousemove = document.onmouseup = null;
-			console.log('Drag eneded');
 		};
 
 		return false;
@@ -53,7 +45,15 @@ function makeRange(rangeId) {
 		return false;
 	};
 
-}
+	slider.onclick = function (evt) {
+		const dotStart = slider.querySelector('.dots-range__item--start');
+		const shiftX = dotStart.offsetLeft;
+		if (evt.target.classList.contains('dots-range__title'))
+		{
+			button.style.left = (evt.target.parentElement.offsetLeft - shiftX) + 'px';
+		}
+	};
 
+}
 
 makeRange('#range-level-js');

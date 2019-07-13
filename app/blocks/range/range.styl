@@ -3,7 +3,6 @@
 	margin-top 30px
 	display block
 	height 3px
-	outline 1px solid red
 	&::after
 		position absolute
 		right 0
@@ -12,7 +11,7 @@
 		margin-left 8px
 		height 3px
 		content ''
-		background-image url('/assets/images/input-bottom-bg.png')
+		background-image url('../../images/input-bottom-bg.png')
 		background-repeat repeat
 	&__button
 		position absolute
@@ -20,19 +19,18 @@
 		bottom 100%
 		margin-bottom 5px
 		font-size 0
-		outline 1px solid green
+		cursor pointer
 .range__dots
 	position absolute
 	right 0
 	left 0
-	outline 1px solid green
 .dots-range__item--start,
 .dots-range__item--end
 	position absolute
 	top 1px
 	width 3px
 	height 25px
-	background-image url('/assets/images/dot-edge.png')
+	background-image url('../../images/dot-edge.png')
 	background-repeat no-repeat
 .dots-range__item--start
 	left 7px
@@ -48,7 +46,7 @@
 	top 1px
 	width 3px
 	height 11px
-	background-image url('/assets/images/dot-middle.png')
+	background-image url('../../images/dot-middle.png')
 	background-repeat no-repeat
 	.dot-range__title
 		left 0
@@ -61,5 +59,5 @@
 	font-size rem(13px)
 	font-weight 700
 	line-height rem(19px)
+	cursor pointer
 	color #2f1b15
-

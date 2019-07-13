@@ -7,16 +7,19 @@ mixin range(props)
 		  dots: [{
 			title: '20%',
 			value: '100px'
-		  }]
+		  },
+		  rangeBtnPosition: 0px]
 		})
 	-
-		if (props.titleStart == null)
+		if (typeof props.titleStart === 'undefined')
 			props.titleStart = ''
-		if (props.titleEnd == null)
+		if (typeof props.titleEnd === 'undefined')
 			props.titleEnd = ''
+		if (typeof props.rangeBtnPosition === 'undefined')
+			props.rangeBtnPosition = '0px'
 
 	.range&attributes(attributes)
-		input.range__button(type='image' src='assets/images/icon-range-btn.png' alt="Бегунок")
+		input.range__button(type='image' src='images/icon-range-btn.png' alt="Бегунок")(style={left: props.rangeBtnPosition})
 		ul.range__dots.dots-range
 			li.dots-range__item.dots-range__item--start
 				span.dots-range__title #{props.titleStart}

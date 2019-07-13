@@ -25,8 +25,6 @@ gulp.task('build', () => (
 		'styles:dependencies',
 		'scripts',
 		'copy',
-		'copyimg',
-        'copy-fonts',
 		'templates'
 	)
 ));
