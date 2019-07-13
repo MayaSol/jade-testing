@@ -50,21 +50,21 @@
 		<div class="page__inner">
 			<div class="page__container">
 				<header class="page-header">
-					<div class="page-header__logo-wrapper"><a href="https://csssr.com/ru" class="logo page-header__logo"><img src="assets/images/logo.png"
+					<div class="page-header__logo-wrapper"><a href="https://csssr.com/ru" class="logo page-header__logo"><img src="images/logo.png"
 							 alt="csssr.ru" width="154" height="52" /></a></div>
 					<div class="page-header__title-wrapper">
-						<h1 class="page-header__title">Дело<img src="assets/images/case.png" alt="Дело" width="221" height="118" class="page-header__title-img" /></h1>
+						<h1 class="page-header__title">Дело<img src="images/case.png" alt="Дело" width="221" height="118" class="page-header__title-img" /></h1>
 					</div>
 				</header>
 				<section class="info"><label class="field-text info__field"><span class="field-text__name">Полное ФИО</span><span
-						 class="field-text__input-wrap"><input type="text" value="Иванов Иван Иванович" class="field-text__input" /></span></label><label
+						 class="field-text__input-wrap"><input type="text" value="Соловьёва Майя Валентиновна" class="field-text__input" /></span></label><label
 					 class="field-text info__field"><span class="field-text__name">Год рождения</span><span class="field-text__input-wrap"><input
-							 type="text" value="1990" class="field-text__input" /></span></label><label class="field-text info__field"><span
-						 class="field-text__name">Место жительства</span><span class="field-text__input-wrap"><input type="text" value="г. Иваново, Россия"
+							 type="text" value="1981" class="field-text__input" /></span></label><label class="field-text info__field"><span
+						 class="field-text__name">Место жительства</span><span class="field-text__input-wrap"><input type="text" value="г. Зеленоград, Россия"
 							 class="field-text__input" /></span></label><label class="field-text info__field"><span class="field-text__name">Скайп</span><span
-						 class="field-text__input-wrap"><input type="text" value="ivanov" class="field-text__input" /></span></label><label
+						 class="field-text__input-wrap"><input type="text" value="maya.soloveva" class="field-text__input" /></span></label><label
 					 class="field-text info__field"><span class="field-text__name">Почта</span><span class="field-text__input-wrap"><input
-							 type="text" value="ivanov@gmail.com" class="field-text__input" /></span></label></section>
+							 type="text" value="maya.soloveva2015@ya.ru" class="field-text__input" /></span></label></section>
 				<section class="about">
 					<h2 class="about__title">Расскажите о себе чекбоксами</h2>
 					<p class="about__text">Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта
@@ -106,16 +106,15 @@
 						<div class="field-checkbox__input-wrap"><label class="field-checkbox__name"><input type="checkbox" class="field-checkbox__input"
 								 name="bem" checked="checked" /><span class="field-checkbox__name-text"><span>Читаю blog.csssr.ru</span></span></label></div>
 						<div class="field-checkbox__input-wrap"><label class="field-checkbox__name"><input type="checkbox" class="field-checkbox__input"
-								 name="bem" checked="checked" /><span class="field-checkbox__name-text"><span>Я ленивый(-ая)</span></span></label></div>
+								 name="bem" /><span class="field-checkbox__name-text"><span>Я ленивый(-ая)</span></span></label></div>
 						<div class="field-checkbox__input-wrap"><label class="field-checkbox__name"><input type="checkbox" class="field-checkbox__input"
 								 name="bem" checked="checked" /><span class="field-checkbox__name-text"><span>У меня хороший<br>английский</span></span></label></div>
 					</div>
-					<div class="field-checkbox"></div>
 				</section>
 				<section class="level-js">
 					<h2 class="level-js__title">Уровень владения JavaScript</h2>
-					<div class="range level-js__range" id="range-level-js"><input type="image" src="assets/images/icon-range-btn.png"
-						 alt="Бегунок" class="range__button" />
+					<div class="range level-js__range" id="range-level-js"><input type="image" src="images/icon-range-btn.png" alt="Бегунок"
+						 style="left:366px" class="range__button" />
 						<ul class="range__dots dots-range">
 							<li class="dots-range__item dots-range__item--start"><span class="dots-range__title">Не владею</span></li>
 							<li style="left:148px" class="dots-range__item dots-range__item--middle"><span class="dots-range__title">Использую
@@ -126,14 +125,19 @@
 						</ul>
 					</div>
 				</section>
-				<section class="about-text">
+				<section class="about-text" id="about-text">
 					<h2 class="about-text__title">Расскажите о себе словами</h2>
 					<div class="about-text__text">
 						<p>Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. Кстати, будет
 							здорово, если при нехватке места для текста строки будут добавляться автоматически.</p>
-					</div><label class="field-text about-text__field"><span class="field-text__input-wrap"><input type="text" class="field-text__input" /></span></label><label
-					 class="field-text about-text__field"><span class="field-text__input-wrap"><input type="text" class="field-text__input" /></span></label><label
-					 class="field-text about-text__field"><span class="field-text__input-wrap"><input type="text" class="field-text__input" /></span></label>
+					</div>
+					<div class="about-text__fields"><label class="field-text about-text__field"><span class="field-text__input-wrap"><input
+								 type="text" value="Я хочу работать в CSSSR, потому что хочу" class="field-text__input" maxlength="40" tabIndex="0" /></span></label><label
+						 class="field-text about-text__field"><span class="field-text__input-wrap"><input type="text" value="развиваться в области веб-разработки."
+								 class="field-text__input" maxlength="40" tabIndex="1" /></span></label><label class="field-text about-text__field"><span
+							 class="field-text__input-wrap"><input type="text" class="field-text__input" maxlength="40" tabIndex="2" /></span></label></div><template
+					 id="about-text-field-template" style="display:none"><label class="field-text about-text__field"><span class="field-text__input-wrap"><input
+								 type="text" class="field-text__input" maxlength="40" /></span></label></template>
 				</section>
 				<section class="plans">
 					<h2 class="plans__title">Какие у вас планы на будущее?</h2>
@@ -150,9 +154,8 @@
 					</div>
 				</section>
 				<section class="fill-date"><label class="field-text fill-date__field"><span class="field-text__name">Дата
-							заполнения</span><span class="field-text__input-wrap"><input type="text" value="30.12.2018" class="field-text__input" /></span></label></section>
+							заполнения</span><span class="field-text__input-wrap"><input type="text" value="08.01.2019" class="field-text__input" /></span></label></section>
 				<script src="assets/scripts/app.min.js"></script>
-				<script src="assets/scripts/range.min.js"></script>
 			</div>
 		</div>
 	</body>
